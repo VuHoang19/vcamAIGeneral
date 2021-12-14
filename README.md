@@ -4,6 +4,12 @@ go get github.com/codegangsta/gin
 gin --appPort 5000 --port 3000
 ```
 
+# Common command lines
+update mod
+```
+go mod tidy
+```
+
 # Log 
 ```
 go get "github.com/Sirupsen/logrus"
@@ -25,4 +31,9 @@ log.Fatal("Bye.")
 
 // Calls panic() after logging
 log.Panic("I'm bailing.")
+```
+
+# Run
+```
+go run main.go
 ```
