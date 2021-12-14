@@ -2,7 +2,7 @@ package routes
 
 import "github.com/gin-gonic/gin"
 
-type Option func(*gin.Engine)
+type Option func(*gin.RouterGroup)
 
 var options = []Option{}
 
@@ -14,8 +14,9 @@ func Include(opts ...Option) {
 //Initialize
 func Init() *gin.Engine {
 	r := gin.New()
+	v1 := r.Group("/api")
 	for _, opt := range options {
-		opt(r)
+		opt(v1)
 	}
 	return r
 }

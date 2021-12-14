@@ -1,7 +1,7 @@
 # Auto reload gin
 ```
 go get github.com/codegangsta/gin
-gin --appPort 5000 --port 3000
+gin --appPort 5000 --port 8080
 ```
 
 # Common command lines

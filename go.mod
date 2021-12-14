@@ -8,12 +8,13 @@ require (
 	github.com/go-sql-driver/mysql v1.6.0
 	github.com/jinzhu/gorm v1.9.16
 	github.com/joho/godotenv v1.4.0
-	gopkg.in/go-playground/validator.v8 v8.18.2
+	github.com/stretchr/testify v1.4.0
 )
 
 require (
+	github.com/davecgh/go-spew v1.1.1 // indirect
 	github.com/jinzhu/inflection v1.0.0 // indirect
-	gopkg.in/go-playground/assert.v1 v1.2.1 // indirect
+	github.com/pmezard/go-difflib v1.0.0 // indirect
 )
 
 require (

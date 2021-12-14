@@ -7,13 +7,14 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
-func Routes(e *gin.Engine) {
+func Routes(e *gin.RouterGroup) {
 	// e . GET ( "/resume" , resumeHander )
 	// e . GET ( "/info" , infoHander )
-	UsersRegister(e)
+	e2 := e.Group("/user")
+	UsersRegister(e2)
 }
 
-func UsersRegister(e *gin.Engine) {
+func UsersRegister(e *gin.RouterGroup) {
 	e.POST("/", UsersRegistration)
 	e.POST("/login", UsersLogin)
 }

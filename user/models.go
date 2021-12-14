@@ -20,6 +20,11 @@ func AutoMigrate() {
 	db.AutoMigrate(&UserModel{})
 }
 
+func TestAutoMigrate() {
+	db := common.GetTestDB()
+	db.AutoMigrate(&UserModel{})
+}
+
 func (u *UserModel) setPassword(password string) error {
 	if len(password) == 0 {
 		return errors.New("password should not be empty!")
